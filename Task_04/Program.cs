@@ -31,7 +31,8 @@ namespace Task_4
             // Считываем целочисленное значение.
             x = int.Parse(Console.ReadLine());
             // Вычисление нового числа и его вывод.
-            Console.WriteLine(ReverseNumber(x));
+            string reverseNumber = ReverseNumber(x).ToString();
+            Console.WriteLine(reverseNumber.Length == 4 ? reverseNumber : reverseNumber.Length == 3 ? "0" + reverseNumber : reverseNumber.Length == 2 ? "00" + reverseNumber : "000" + reverseNumber);
         }
 
         // Метод разворачивания числа.

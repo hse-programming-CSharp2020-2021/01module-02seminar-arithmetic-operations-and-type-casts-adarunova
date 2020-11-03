@@ -41,8 +41,7 @@ namespace Task_01
             // Ввод переменной. 
             x = double.Parse(Console.ReadLine());
             // Вычисление и вывод значения полинома.
-            Console.WriteLine($"{GetPolinomValue(x):f2}");
-
+            Console.WriteLine(GetPolinomValue(x).ToString("F2", CultureInfo.GetCultureInfo("ru-RU")));
         }
 
         // Метод вычисления значения полинома.

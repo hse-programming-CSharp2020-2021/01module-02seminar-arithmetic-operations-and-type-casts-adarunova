@@ -48,7 +48,8 @@ namespace Task_03
             // Дискриминант уравнения.
             double discriminant = b * b - 4 * a * c;
             // Запись корней уравнения.
-            string result = discriminant < 0 ? complexRootsMessage : discriminant == 0 ? $"{-b / (2 * a):f2}" : $"{(-b + Math.Sqrt(discriminant)) / (2 * a):f2}{Environment.NewLine}{(-b - Math.Sqrt(discriminant)) / (2 * a):f2}";
+            string result = discriminant < 0 ? complexRootsMessage : discriminant == 0 ? $"{-b / (2 * a):f2}" : 
+                $"{((-b + Math.Sqrt(discriminant)) / (2 * a)).ToString("F2", CultureInfo.GetCultureInfo("ru-RU"))}{Environment.NewLine}{((-b - Math.Sqrt(discriminant)) / (2 * a)).ToString("F2", CultureInfo.GetCultureInfo("ru-RU"))}";
             Console.WriteLine(result);
         }
     }

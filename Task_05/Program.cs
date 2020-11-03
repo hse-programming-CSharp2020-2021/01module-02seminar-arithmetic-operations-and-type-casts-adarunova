@@ -47,7 +47,7 @@ namespace Task_05
             b = double.Parse(Console.ReadLine());
             c = double.Parse(Console.ReadLine());
             // Результат.
-            string result = a + b <= c || a + c <= b || b + c <= a ? notTriangleMessage : $"{Sqare(a, b, c):f3}";
+            string result = a + b <= c || a + c <= b || b + c <= a ? notTriangleMessage : Sqare(a, b, c).ToString("F2", CultureInfo.GetCultureInfo("ru-RU"));
             Console.WriteLine(result);
         }
 

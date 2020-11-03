@@ -49,8 +49,8 @@ namespace Task_07
             GetSqrtAndSqr(x, out sqrt, out sqr);
             // Вывод результата.
             if (sqrt != -1)
-                Console.WriteLine($"{sqrt:f2}");
-            Console.WriteLine($"{sqr:f2}");
+                Console.WriteLine(sqrt.ToString("F2", CultureInfo.GetCultureInfo("ru-RU")));
+            Console.WriteLine(sqr.ToString("F2", CultureInfo.GetCultureInfo("ru-RU")));
             Console.WriteLine(integer);
             Console.WriteLine(fraction);
         }

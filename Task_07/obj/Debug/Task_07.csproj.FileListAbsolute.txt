@@ -1,0 +1,6 @@
+C:\Users\Ася и Рита\Source\Repos\01module-02seminar-arithmetic-operations-and-type-casts-adarunova\Task_07\bin\Debug\Task_07.exe.config
+C:\Users\Ася и Рита\Source\Repos\01module-02seminar-arithmetic-operations-and-type-casts-adarunova\Task_07\bin\Debug\Task_07.exe
+C:\Users\Ася и Рита\Source\Repos\01module-02seminar-arithmetic-operations-and-type-casts-adarunova\Task_07\bin\Debug\Task_07.pdb
+C:\Users\Ася и Рита\Source\Repos\01module-02seminar-arithmetic-operations-and-type-casts-adarunova\Task_07\obj\Debug\Task_07.csproj.CoreCompileInputs.cache
+C:\Users\Ася и Рита\Source\Repos\01module-02seminar-arithmetic-operations-and-type-casts-adarunova\Task_07\obj\Debug\Task_07.exe
+C:\Users\Ася и Рита\Source\Repos\01module-02seminar-arithmetic-operations-and-type-casts-adarunova\Task_07\obj\Debug\Task_07.pdb
