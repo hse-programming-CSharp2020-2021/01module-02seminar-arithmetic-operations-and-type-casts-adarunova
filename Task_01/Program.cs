@@ -42,6 +42,7 @@ namespace Task_01
             x = double.Parse(Console.ReadLine());
             // Вычисление и вывод значения полинома.
             Console.WriteLine(GetPolinomValue(x).ToString("F2", CultureInfo.GetCultureInfo("ru-RU")));
+            Console.Read();
         }
 
         // Метод вычисления значения полинома.
