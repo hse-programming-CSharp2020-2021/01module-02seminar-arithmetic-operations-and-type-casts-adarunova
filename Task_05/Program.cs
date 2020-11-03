@@ -28,29 +28,36 @@
  */
 
 using System;
+using System.Globalization;
 
-namespace Task_05 {
-	class Program {
-		const string notTriangleMessage = "not a triangle";
+namespace Task_05
+{
+    class Program
+    {
+        const string notTriangleMessage = "not a triangle";
 
-		static void Main(string[] args) {
-			// TODO : Сменить локаль на "ru-RU". 
+        static void Main(string[] args)
+        {
+            // Смена локали на "ru-RU". 
+            CultureInfo.CurrentUICulture = new CultureInfo("ru-RU");
+            // Стороны треугольника.
+            double a, b, c;
+            // Считываем стороны треугольника.
+            a = double.Parse(Console.ReadLine());
+            b = double.Parse(Console.ReadLine());
+            c = double.Parse(Console.ReadLine());
+            // Результат.
+            string result = a + b <= c || a + c <= b || b + c <= a ? notTriangleMessage : $"{Sqare(a, b, c):f3}";
+            Console.WriteLine(result);
+        }
 
-			double a, b, c;
-			// TODO : Считать 3 стороны треугольника.
-
-
-			// TODO : Проверить неравенство треугольника и поместить в 
-			// результирующую строку notTriangleMessage 
-			// или площадь треугольника.
-			string result = ;
-
-			Console.WriteLine(result);
-		}
-
-		static double Sqare(double a, double b, double c) {
-			// TODO : Реализоать вычисление площади по формуле Герона. Ну или что-нибудь более извращённое 🙃.
-			return;
-		}
-	}
+        // Метод вычисления алощади треугольника.
+        static double Sqare(double a, double b, double c)
+        {
+            // Полуперимитер.
+            double p = (a + b + c) / 2;
+            // Возвращаем площадь.
+            return Math.Sqrt(p * (p - a) * (p - b) * (p - c));
+        }
+    }
 }

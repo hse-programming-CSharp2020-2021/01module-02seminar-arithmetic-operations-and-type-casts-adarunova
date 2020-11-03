@@ -23,20 +23,25 @@
  */
 
 using System;
+using System.Globalization;
 
-namespace Task_06 {
-	class Program {
-		static void Main(string[] args) {
-			// TODO : Сменить локаль на "en-US" для вывода в долларах
-			double sum;
-			int percent;
-			// TODO : Считать вещественную и целочисленную переменную.
-
-			// TODO : Рассчитать бюджет на игры.
-			double onComputerGames = ;
-
-			// TODO : Вывести используя спецификаторы формата валюты результат. 
-			// (https://metanit.com/sharp/tutorial/7.5.php)
-		}
-	}
+namespace Task_06
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Смена локали на "en-US". 
+            CultureInfo.CurrentUICulture = new CultureInfo("en-US");
+            double sum;
+            int percent;
+            // Считываем бюджет и процент на игры.
+            sum = double.Parse(Console.ReadLine());
+            percent = int.Parse(Console.ReadLine());
+            // Бюджет на игры.
+            double onComputerGames = sum / 100 * percent;
+            // Выводим результат.
+            Console.WriteLine(onComputerGames.ToString("C2", CultureInfo.CreateSpecificCulture("en-US")));
+        }
+    }
 }
