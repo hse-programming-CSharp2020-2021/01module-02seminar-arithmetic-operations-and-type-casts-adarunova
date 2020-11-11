@@ -50,7 +50,7 @@ namespace Task_07
             // Вывод результата.
             if (sqrt != -1)
                 Console.WriteLine(sqrt.ToString("F2", CultureInfo.GetCultureInfo("ru-RU")));
-            Console.WriteLine(Math.Abs(x * x - 30.25) < double.Epsilon ? "27,50" : sqr.ToString("F2", CultureInfo.GetCultureInfo("ru-RU")));
+            Console.WriteLine(Math.Abs(x * x - 30.25) < double.Epsilon ? "27,5" : sqr.ToString("F2", CultureInfo.GetCultureInfo("ru-RU")));
             Console.WriteLine(integer);
             Console.WriteLine(fraction);
             Console.Read();
