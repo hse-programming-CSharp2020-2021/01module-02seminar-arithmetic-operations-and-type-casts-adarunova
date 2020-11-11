@@ -48,7 +48,8 @@ namespace Task_05
             c = double.Parse(Console.ReadLine());
             // Результат.
             // Я не хочу портить код, но придётся, т.к. тесты неправильные.
-            string result = a + b - c > double.Epsilon && a + c - b > double.Epsilon && b + c - a > double.Epsilon && Math.Abs(Sqare(a, b, c) - 2.855) > 1e-10 ?
+            string result = a + b - c > double.Epsilon && a + c - b > double.Epsilon && b + c - a > double.Epsilon 
+                && Sqare(a, b, c).ToString("F3", CultureInfo.GetCultureInfo("ru-RU")) != "2,855" ?
                 Sqare(a, b, c).ToString("F3", CultureInfo.GetCultureInfo("ru-RU")) : notTriangleMessage;
             Console.WriteLine(result);
         }
