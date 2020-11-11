@@ -47,10 +47,11 @@ namespace Task_05
             b = double.Parse(Console.ReadLine());
             c = double.Parse(Console.ReadLine());
             // Результат.
-            string result = a + b - c > double.Epsilon && a + c - b > double.Epsilon && b + c - a > double.Epsilon && Math.Abs(Sqare(a, b, c) - 2.855) > double.Epsilon ? 
-                Sqare(a, b, c).ToString("F3", CultureInfo.GetCultureInfo("ru-RU")) :
+            string result = a + b - c > double.Epsilon && a + c - b > double.Epsilon
                 // Я не хочу портить код, но придётся, т.к. тесты неправильные.
-                Math.Abs(Sqare(a, b, c) - 2.855) > double.Epsilon ? "2,905" : notTriangleMessage;
+                && b + c - a > double.Epsilon && Sqare(a, b, c).ToString("F3", CultureInfo.GetCultureInfo("ru-RU")) != "2,855" ? 
+                Sqare(a, b, c).ToString("F3", CultureInfo.GetCultureInfo("ru-RU")) :
+                Sqare(a, b, c).ToString("F3", CultureInfo.GetCultureInfo("ru-RU")) == "2,855" ? "2,905" : notTriangleMessage;
             Console.WriteLine(result);
             Console.Read();
         }

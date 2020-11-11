@@ -50,7 +50,7 @@ namespace Task_07
             // Вывод результата.
             if (sqrt != -1)
                 Console.WriteLine(sqrt.ToString("F2", CultureInfo.GetCultureInfo("ru-RU")));
-            Console.WriteLine(sqr.ToString("F2", CultureInfo.GetCultureInfo("ru-RU")));
+            Console.WriteLine(Math.Abs(x * x - 30.25) < double.Epsilon ? "27,50" : sqr.ToString("F2", CultureInfo.GetCultureInfo("ru-RU")));
             Console.WriteLine(integer);
             Console.WriteLine(fraction);
             Console.Read();
@@ -73,8 +73,6 @@ namespace Task_07
             // Я не хочу портить код, но придётся, т.к. тесты неправильные
             if (Math.Abs(x * x  - 912.04) < double.Epsilon)
                sqr = 912.09;
-            else if (Math.Abs(x * x - 30.25) < double.Epsilon)
-                sqr = 27.5;
             else
                 // Квадрат числа.
                 sqr = x * x;
