@@ -39,7 +39,7 @@ namespace Task_05
         static void Main(string[] args)
         {
             // Смена локали на "ru-RU". 
-            CultureInfo.CurrentUICulture = new CultureInfo("ru-RU");
+            CultureInfo.CurrentCulture = new CultureInfo("ru-RU");
             // Стороны треугольника.
             double a, b, c;
             // Считываем стороны треугольника.

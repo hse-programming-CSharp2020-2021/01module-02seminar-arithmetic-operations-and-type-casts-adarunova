@@ -35,7 +35,7 @@ namespace Task_07
         static void Main(string[] args)
         {
             // Смена локали на "ru-RU". 
-            CultureInfo.CurrentUICulture = new CultureInfo("ru-RU");
+            CultureInfo.CurrentCulture = new CultureInfo("ru-RU");
             double x;
             // Считываем вещественную переменную.
             x = double.Parse(Console.ReadLine());
@@ -53,6 +53,7 @@ namespace Task_07
             Console.WriteLine(sqr.ToString("F2", CultureInfo.GetCultureInfo("ru-RU")));
             Console.WriteLine(integer);
             Console.WriteLine(fraction);
+            Console.Read();
         }
 
         // Метод, вычисляющий целую и дробную часть числа.

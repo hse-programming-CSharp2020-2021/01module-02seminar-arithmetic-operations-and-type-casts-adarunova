@@ -38,7 +38,7 @@ namespace Task_03
         static void Main(string[] args)
         {
             // Смена локали на "ru-RU". 
-            CultureInfo.CurrentUICulture = new CultureInfo("ru-RU");
+            CultureInfo.CurrentCulture = new CultureInfo("ru-RU");
             // Коэффициенты.
             double a, b, c;
             // Считывем коэффициенты уравнения.
@@ -50,7 +50,8 @@ namespace Task_03
             // Запись корней уравнения.
             string result = discriminant < 0 ? complexRootsMessage : 
                 discriminant < double.Epsilon ? (-b / (2 * a)).ToString("F2", CultureInfo.GetCultureInfo("ru-RU")) : 
-                $"{((-b + Math.Sqrt(discriminant)) / (2 * a)).ToString("F2", CultureInfo.GetCultureInfo("ru-RU"))}{Environment.NewLine}{((-b - Math.Sqrt(discriminant)) / (2 * a)).ToString("F2", CultureInfo.GetCultureInfo("ru-RU"))}";
+                $"{((-b + Math.Sqrt(discriminant)) / (2 * a)).ToString("F2", CultureInfo.GetCultureInfo("ru-RU"))}" +
+                $"{Environment.NewLine}{((-b - Math.Sqrt(discriminant)) / (2 * a)).ToString("F2", CultureInfo.GetCultureInfo("ru-RU"))}";
             Console.WriteLine(result);
         }
     }

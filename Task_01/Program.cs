@@ -35,13 +35,13 @@ namespace Task_01
         static void Main(string[] args)
         {
             // Смена локали на "ru-RU". 
-            CultureInfo.CurrentUICulture = new CultureInfo("ru-RU");
+            CultureInfo.CurrentCulture = new CultureInfo("ru-RU");
             // Переменная.
             double x;
             // Ввод переменной. 
             x = double.Parse(Console.ReadLine());
             // Вычисление и вывод значения полинома.
-            Console.WriteLine($"{GetPolinomValue(x):f2}");
+            Console.WriteLine(GetPolinomValue(x).ToString("F2", CultureInfo.GetCultureInfo("ru-RU")));
         }
 
         // Метод вычисления значения полинома.
@@ -57,8 +57,8 @@ namespace Task_01
                 return x;
             else if (pow % 2 == 0)
             {
-                double y = QuickPow(x, pow / 2);
-                return y * y;
+                x = QuickPow(x, pow / 2);
+                return x * x;
             }
             else
                 return x * QuickPow(x, pow - 1);
