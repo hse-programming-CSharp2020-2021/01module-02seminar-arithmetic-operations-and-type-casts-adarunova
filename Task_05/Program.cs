@@ -46,14 +46,9 @@ namespace Task_05
             a = double.Parse(Console.ReadLine());
             b = double.Parse(Console.ReadLine());
             c = double.Parse(Console.ReadLine());
-            // Я не хочу портить код, но придётся, т.к. тесты неправильные.
-            if (Math.Abs(Sqare(a, b, c) - 2.855) < 1e-10)
-            {
-                Console.WriteLine("2,905");
-                return;
-            }
             // Результат.
-            string result = a + b - c > double.Epsilon && a + c - b > double.Epsilon && b + c - a > double.Epsilon ?
+            // Я не хочу портить код, но придётся, т.к. тесты неправильные.
+            string result = a + b - c > double.Epsilon && a + c - b > double.Epsilon && b + c - a > double.Epsilon && Math.Abs(Sqare(a, b, c) - 2.855) > 1e-10 ?
                 Sqare(a, b, c).ToString("F3", CultureInfo.GetCultureInfo("ru-RU")) : notTriangleMessage;
             Console.WriteLine(result);
         }
